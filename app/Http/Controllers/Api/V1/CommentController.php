@@ -53,13 +53,13 @@ class CommentController extends Controller
      */
     public function store(StoreCommentRequest $request)
     {
-        $validatedRequest = Validator::make($request->all(), function(){
-            return [
+        $validatedRequest = Validator::make($request->all(), 
+           [
                 'user_id' => 'required|integer',
                 'book_id' => 'required|integer',
                 'content' => 'required'
-            ];
-        });
+            ]
+        );
 
         if ($validatedRequest->fails())
         {
@@ -67,6 +67,7 @@ class CommentController extends Controller
         }
 
         $comment = new Comment();
+
         $comment->user_id = $request->input('user_id');
 
         $comment->book_id = $request->input('book_id');
