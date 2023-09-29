@@ -18,4 +18,6 @@ class Book extends Model
     {
         $this->belongsTo(Author::class);
     }
+
+    // TODO: Cast is_explicit to true
 }
