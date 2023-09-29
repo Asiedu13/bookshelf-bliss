@@ -2,18 +2,41 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comment;
+use Illuminate\Support\Facades\Validator;
 use App\Http\Requests\StoreCommentRequest;
 use App\Http\Requests\UpdateCommentRequest;
-use App\Models\Comment;
 
 class CommentController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
+    public function sendGoodResponse($data) 
+    {
+        return response()->json(
+            [
+                'status' => true,
+                'data' => $data
+            ], 200
+            );
+    }
+
+    public function sendErrResponse($err)
+    {
+        return response()->json(
+            [
+                'status' => false,
+                'messages' => $err
+            ], 500
+            );
+    }
+
     public function index()
     {
-        //
+        $comments = Comment::orderBy('id', 'desc')-> paginate(10);
+
+        return $this->sendGoodResponse($comments);
     }
 
     /**
@@ -29,15 +52,44 @@ class CommentController extends Controller
      */
     public function store(StoreCommentRequest $request)
     {
-        //
+        $validatedRequest = Validator::make($request->all(), function(){
+            return [
+                'user_id' => 'required|integer',
+                'book_id' => 'required|integer',
+                'content' => 'required'
+            ];
+        });
+
+        if ($validatedRequest->fails())
+        {
+           return $this->sendErrResponse($validatedRequest->messages());
+        }
+
+        $comment = new Comment();
+        $comment->user_id = $request->input('user_id');
+
+        $comment->book_id = $request->input('book_id');
+        $comment->content = $request->input('content');
+
+        $comment->save();
+
+        return $this->sendGoodResponse($comment);
+        
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Comment $comment)
+    public function show($comment)
     {
-        //
+        $comment = Comment::find($comment)->first();
+
+        if(is_null($comment))
+        {
+            return $this->sendErrResponse('Comment does not exist');
+        }
+        return $this->sendGoodResponse($comment);
+
     }
 
     /**
@@ -51,16 +103,46 @@ class CommentController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateCommentRequest $request, Comment $comment)
+    public function update(UpdateCommentRequest $request, $comment)
     {
-        //
+         $validatedRequest = Validator::make($request->all(), function(){
+            return [
+                'user_id' => 'required|integer',
+                'book_id' => 'required|integer',
+                'content' => 'required'
+            ];
+        });
+
+        if ($validatedRequest->fails())
+        {
+           return $this->sendErrResponse($validatedRequest->messages());
+        }
+
+        $comment = Comment::find($comment)->first();
+        $comment->user_id = $request->input('user_id');
+
+        $comment->book_id = $request->input('book_id');
+        $comment->content = $request->input('content');
+
+        $comment->update();
+
+        return $this->sendGoodResponse($comment);
+        
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Comment $comment)
+    public function destroy($comment)
     {
-        //
+        $comment = Comment::find($comment);
+
+        if(is_null($comment))
+        {
+            return $this->sendErrResponse('Comment does not exist');
+        }
+        
+        $comment->delete();
+        $this->sendGoodResponse($comment);
     }
 }
