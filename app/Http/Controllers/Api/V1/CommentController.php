@@ -143,6 +143,6 @@ class CommentController extends Controller
         }
 
         $comment->delete();
-        $this->sendGoodResponse($comment);
+       return $this->sendGoodResponse($comment);
     }
 }
