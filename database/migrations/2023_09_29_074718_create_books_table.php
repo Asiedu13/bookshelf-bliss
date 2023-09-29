@@ -16,7 +16,7 @@ return new class extends Migration
             $table->integer('author_id');
             $table->string('title');
             $table->text('description');
-            $table->genre(); // TODO: Look into enum type
+            $table->string('genre'); // TODO: Look into enum type
             $table->string('language');
             $table->string('editors');
             $table->string('url');
