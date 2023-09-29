@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V1;
 
 use App\Models\Comment;
 use Illuminate\Support\Facades\Validator;
 use App\Http\Requests\StoreCommentRequest;
 use App\Http\Requests\UpdateCommentRequest;
+use App\Http\Controllers\Controller;
 
 class CommentController extends Controller
 {
@@ -141,7 +142,7 @@ class CommentController extends Controller
         {
             return $this->sendErrResponse('Comment does not exist');
         }
-        
+
         $comment->delete();
         $this->sendGoodResponse($comment);
     }
