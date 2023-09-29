@@ -13,6 +13,15 @@ return new class extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
+            $table->integer('author_id');
+            $table->string('title');
+            $table->text('description');
+            $table->genre(); // TODO: Look into enum type
+            $table->string('language');
+            $table->string('editors');
+            $table->string('url');
+            $table->boolean('is_explicit');
+            $table->integer('rating');
             $table->timestamps();
         });
     }
