@@ -107,13 +107,11 @@ class CommentController extends Controller
      */
     public function update(UpdateCommentRequest $request, $comment)
     {
-         $validatedRequest = Validator::make($request->all(), function(){
-            return [
+         $validatedRequest = Validator::make($request->all(), [
                 'user_id' => 'required|integer',
                 'book_id' => 'required|integer',
                 'content' => 'required'
-            ];
-        });
+            ] );
 
         if ($validatedRequest->fails())
         {
