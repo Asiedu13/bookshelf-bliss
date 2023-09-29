@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->integer('comment_id'); // TODO: Reomve this
             $table->integer('user_id');
             $table->integer('book_id');
             $table->text('content');
