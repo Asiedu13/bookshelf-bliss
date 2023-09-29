@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('authors', function (Blueprint $table) {
             $table->id();
+            $table->string('author_name');
+            $table->dateTime('DOB')->nullable();
+            $table->string('genre')->nullable();
+            $table->string('email')->unique();
+            $table->string('password');
             $table->timestamps();
         });
     }
