@@ -23,9 +23,9 @@
                 
             </section>
 
-            <header class="flex justify-between mt-[2rem] h-[350px] border-2 ">
+            <header class="flex justify-between mt-[2rem] h-[350px] ">
                 {{-- Main --}}
-                <section class="w-[400px] h-[inherit] border-2">
+                <section class="w-[400px] h-[inherit]">
                     <h1 class="text-6xl">
                         Happy reading, Felix
                     </h1>
@@ -60,11 +60,11 @@
                 </section>
             </header>
 
-            
+
             {{-- Popular & Schedule reading --}}
-            <section>
+            <section class="flex">
             {{-- Popular books section --}}
-                <section class="w-[55%] border-2 h-[400px]">
+                <section class="w-[55%]  h-[400px]">
                     <header>
                         <h2 class="text-2xl p-[1rem]">Popular Now</h2>
                     </header>
