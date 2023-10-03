@@ -60,11 +60,59 @@
                 </section>
             </header>
 
-            {{-- Popular books section --}}
-            <section class="w-[50%] border-2 h-[400px]">
-
-            </section>
             
+            {{-- Popular & Schedule reading --}}
+            <section>
+            {{-- Popular books section --}}
+                <section class="w-[55%] border-2 h-[400px]">
+                    <header>
+                        <h2 class="text-2xl p-[1rem]">Popular Now</h2>
+                    </header>
+
+                {{-- book cards --}}
+                    <div class="flex justify-around">
+                        <article>
+                        {{-- Book Image --}}
+                            <img src="/media/imgs/book1.jpg" alt="book title" class="w- [150px] h-[240px] rounded-xl my-[20px] shadow-2xl">
+                        {{-- Book description --}}
+                            <div class="flex flex-col w-[150px] h-[50px] overflow-hidden">
+                                <b>The world of Ice and Fire</b>
+                                <i>Volume I</i>
+                            </div>
+                        </article>
+
+                        <article>
+                        {{-- Book Image --}}
+                            <img src="/media/imgs/book2.jpg" alt="book title" class="w-[150px] h-[240px] rounded-xl my-[20px] shadow-2xl">
+                        {{-- Book description --}}
+                            <div class="flex flex-col w-[150px] h-[50px] overflow-hidden">
+                                <b>Fantastic Beasts</b>
+                                <i>Volume II</i>
+                            </div>
+                        </article>
+
+                        <article>
+                        {{-- Book Image --}}
+                            <img src="/media/imgs/book4.jpg" alt="book title" class="w-[150px] h-[240px] rounded-xl my-[20px] shadow-2xl">
+                        {{-- Book description --}}
+                            <div class="flex flex-col w-[150px] h-[50px] overflow-hidden">
+                                <b>Game of Thrones</b>
+                                <i>Volume III</i>
+                            </div>
+                        </article>
+
+                        <article>
+                        {{-- Book Image --}}
+                            <img src="/media/imgs/book5.jpg" alt="book title" class="w-[150px] h-[240px] rounded-xl my-[20px] shadow-2xl">
+                        {{-- Book description --}}
+                            <div class="flex flex-col w-[150px] h-[50px] overflow-hidden">
+                                <b>The Wise Man's Fear</b>
+                                <i>Volume I</i>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </section>
         </main>
      
 
