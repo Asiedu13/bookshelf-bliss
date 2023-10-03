@@ -23,9 +23,9 @@
                 
             </section>
 
-            <header class="flex justify-between mt-[2rem] h-[350px] ">
+            <header class="flex justify-between mt-[2rem] h-[350px] border-2 ">
                 {{-- Main --}}
-                <section class="w-[400px] h-[inherit]">
+                <section class="w-[400px] h-[inherit] border-2">
                     <h1 class="text-6xl">
                         Happy reading, Felix
                     </h1>
@@ -36,7 +36,7 @@
                 </section>
 
                 {{-- Trending book profile --}}
-                <section class="flex justify-between w-[730px] h-[inherit]">
+                <section class="flex justify-between w-[750px] h-[inherit]">
                     <img src="/media/imgs/book3.jpg" alt="trending book" class="h-[90%] w-[240px] shadow-2xl rounded">
                     {{-- Book profile description --}}
                     <div class="w-[55%]">
@@ -59,6 +59,11 @@
                     </div>
                 </section>
             </header>
+
+            {{-- Popular books section --}}
+            <section class="w-[50%] border-2 h-[400px]">
+
+            </section>
             
         </main>
      
