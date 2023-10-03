@@ -4,13 +4,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Bookshelf Bliss | Home</title>
-
+        <title>{{$title ?? 'Page Not Found'}}</title>
+        @vite('resources/css/app.css')
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     </head>
     <body>
-        <h2>Bookshelf bliss under construction</h2>
+       {{$slot}}
     </body>
 </html>
