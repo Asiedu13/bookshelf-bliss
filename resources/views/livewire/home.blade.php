@@ -1,4 +1,4 @@
- <main class="p-[40px] bg-[#f0eee2] w-[100vw] h-[100vh]">
+ <main class="p-[40px]  w-[100vw] h-[100vh]">
 
             {{-- top section --}}
             <section class=" flex justify-between">
