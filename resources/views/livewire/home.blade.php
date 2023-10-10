@@ -67,6 +67,8 @@
                                 <i>Volume II</i>
                             </div>
                         </article>
+                        <livewire:components.cards.card-mini src="/media/imgs/book1.jpg" title="The world of Ice and Fire" edition="Volume I" />
+                        <livewire:components.cards.card-mini src="/media/imgs/book2.jpg" title="Fantastic Beasts" edition="Volume II" />
 
                         <article>
                         {{-- Book Image --}}
