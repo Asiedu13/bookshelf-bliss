@@ -41,7 +41,9 @@
             {{-- Popular & Schedule reading --}}
             <section class="flex">
             {{-- Popular books section --}}
-                <section class="w-[55%]  h-[400px]">
+            {{-- Left section --}}
+            <section class="flex-1">
+                <section class="w-[100%]  h-[400px]">
                     <header>
                         <h2 class="text-2xl p-[1rem]">Popular Now</h2>
                     </header>
@@ -58,6 +60,13 @@
                     </div>
                 </section>
             </section>
-        </main>
-     
 
+            {{-- Right section --}}
+            <section>
+
+                <section class="flex flex-1 flex-col p-[1rem] ">
+                    <livewire:components.calendar.calendar-main />
+                </section>
+            </section>
+            </section>
+        </main>
