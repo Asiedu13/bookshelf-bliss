@@ -48,47 +48,13 @@
 
                 {{-- book cards --}}
                     <div class="flex justify-around">
-                        <article>
-                        {{-- Book Image --}}
-                            <img src="/media/imgs/book1.jpg" alt="book title" class="w- [150px] h-[240px] rounded-xl my-[20px] shadow-2xl">
-                        {{-- Book description --}}
-                            <div class="flex flex-col w-[150px] h-[50px] overflow-hidden">
-                                <b>The world of Ice and Fire</b>
-                                <i>Volume I</i>
-                            </div>
-                        </article>
-
-                        <article>
-                        {{-- Book Image --}}
-                            <img src="/media/imgs/book2.jpg" alt="book title" class="w-[150px] h-[240px] rounded-xl my-[20px] shadow-2xl">
-                        {{-- Book description --}}
-                            <div class="flex flex-col w-[150px] h-[50px] overflow-hidden">
-                                <b>Fantastic Beasts</b>
-                                <i>Volume II</i>
-                            </div>
-                        </article>
                         <livewire:components.cards.card-mini src="/media/imgs/book1.jpg" title="The world of Ice and Fire" edition="Volume I" />
                         <livewire:components.cards.card-mini src="/media/imgs/book2.jpg" title="Fantastic Beasts" edition="Volume II" />
 
-                        <article>
-                        {{-- Book Image --}}
-                            <img src="/media/imgs/book4.jpg" alt="book title" class="w-[150px] h-[240px] rounded-xl my-[20px] shadow-2xl">
-                        {{-- Book description --}}
-                            <div class="flex flex-col w-[150px] h-[50px] overflow-hidden">
-                                <b>Game of Thrones</b>
-                                <i>Volume III</i>
-                            </div>
-                        </article>
+                        <livewire:components.cards.card-mini src="/media/imgs/book4.jpg" title="Game of Thrones" edition="Volume III" />
 
-                        <article>
-                        {{-- Book Image --}}
-                            <img src="/media/imgs/book5.jpg" alt="book title" class="w-[150px] h-[240px] rounded-xl my-[20px] shadow-2xl">
-                        {{-- Book description --}}
-                            <div class="flex flex-col w-[150px] h-[50px] overflow-hidden">
-                                <b>The Wise Man's Fear</b>
-                                <i>Volume I</i>
-                            </div>
-                        </article>
+                        <livewire:components.cards.card-mini src="media/imgs/book5.jpg" title="The Wise Man's Fear" edition="Volume I" />
+                    
                     </div>
                 </section>
             </section>
