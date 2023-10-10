@@ -11,8 +11,8 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     </head>
     <body class="">
-        <span class="bg-[white] w-[45vw] h-[100vh] -z-10 fixed border-2 border-solid border-[blue]"></span>
-        <span class="bg-[#f0eee2] w-[55vw] h-[100vh] fixed -z-10 "></span>
+       <span class="bg-[#FBFBF3] w-[45vw] h-[100vh] fixed right-0 border-2 border-solid border-gray -z-10"></span>
+        <span class="bg-[#F0EEE2] w-[55vw] h-[100vh] fixed -z-10 "></span>
        {{$slot}}
     </body>
 </html>
