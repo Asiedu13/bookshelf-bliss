@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Home;
+use App\Livewire\Registration\SignUp;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +15,4 @@ use App\Livewire\Home;
 */
 
 Route::get('/', Home::class);
+Route::get('/register', SignUp::class);
